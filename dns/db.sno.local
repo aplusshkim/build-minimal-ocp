@@ -1,0 +1,22 @@
+$TTL    604800
+@       IN      SOA     support.sno.local. admin.sno.local. (
+                  1     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800     ; Negative Cache TTL
+)
+
+; name servers - NS records
+    IN      NS      support
+
+; name servers - A records
+support.sno.local.              IN      A      172.30.1.240
+
+; OpenShift Container Platform Cluster - A records
+
+; OpenShift internal cluster IPs - A records
+api.isw.sno.local.        IN    A    172.30.1.241
+*.apps.isw.sno.local.     IN    A    172.30.1.241
+console-openshift-console.apps.isw.sno.local.    IN     A     172.30.1.241
+oauth-openshift.apps.isw.sno.local.              IN     A     172.30.1.241
